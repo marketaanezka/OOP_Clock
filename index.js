@@ -54,20 +54,21 @@ const Clock = {
   },
 
   mount(parent) {
-    const selectByclass = document.querySelector("." + parent);
-    selectByclass.appendChild(this.render());
+    parent.appendChild(this.render());
   }
 
 }
 
+const timeElm = document.querySelector(".time");
+
 const currentTime = Object.create(Clock);
-currentTime.constructor(5,20);
+currentTime.constructor(5, 20);
 
 const midnight = Object.create(Clock);
-midnight.constructor(0,0);
+midnight.constructor(0, 0);
 
 const minuteToMidnight = Object.create(Clock);
-minuteToMidnight.constructor(23,59);
+minuteToMidnight.constructor(23, 59);
 
 
 /*const currentTime = {
